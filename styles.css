@@ -1,0 +1,37 @@
+/* Style pour la navigation principale */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    /* On garde tes styles existants (glass effect, etc.) */
+}
+
+/* Alignement horizontal de la liste de liens */
+nav .nav-links {
+    display: flex; /* Met les liens sur une ligne */
+    list-style: none;
+    gap: 2rem; /* Espace entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style des liens */
+nav .nav-links a {
+    text-decoration: none;
+    color: #241910; /* Ta couleur --fg */
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+/* Effet au survol ET pour la page active */
+nav .nav-links a:hover, 
+nav .nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.288); /* Fond léger */
+    color: #000; /* Change la couleur au besoin */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Petite ombre pour l'effet "hover" */
+    backdrop-filter: blur(5px);
+}
