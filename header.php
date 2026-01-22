@@ -29,7 +29,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: rgba(255,255,255,0);
             }
         </style>

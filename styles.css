@@ -1,11 +1,22 @@
 /* Style pour la navigation principale */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    /* On garde tes styles existants (glass effect, etc.) */
-}
+  position: fixed;
+  width: 100vw;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  will-change: opacity;
+  z-index: 2;
+  z-index: 1000;
+  background: linear-gradient(135 deg, rgba(255,255,255,0.1), rgba(255, 255, 255, 0.575));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgb(201, 115, 3);
+  box-shadow: rgba(255,255,255,0);
+  }
 
 /* Alignement horizontal de la liste de liens */
 nav .nav-links {
@@ -19,7 +30,7 @@ nav .nav-links {
 /* Style des liens */
 nav .nav-links a {
     text-decoration: none;
-    color: #241910; /* Ta couleur --fg */
+    color: #ffffff; /* Ta couleur --fg */
     font-size: 18px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -30,8 +41,66 @@ nav .nav-links a {
 /* Effet au survol ET pour la page active */
 nav .nav-links a:hover, 
 nav .nav-links a.active {
-    background-color: rgba(255, 255, 255, 0.288); /* Fond léger */
+    background-color: rgba(255, 255, 255, 0.911); /* Fond léger */
     color: #000; /* Change la couleur au besoin */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Petite ombre pour l'effet "hover" */
     backdrop-filter: blur(5px);
 }
+
+/* global.css */
+
+/* Variables pour garder une cohérence avec ton index.php */
+:root {
+    --fg: #241910;
+    --bg: #fefbf4;
+}
+
+body {
+            /* On s'assure que le fond correspond au reste du site */
+            background-color: #111111; 
+            margin: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Prend toute la hauteur de l'écran */
+            margin: 0;
+        }
+
+        main {
+            /* Pousse le contenu vers le bas pour ne pas être sous le header fixe */
+            padding-top: 120px; 
+            /* Espace en bas pour éviter que le tableau ne colle au footer */
+            padding-bottom: 50px; 
+            min-height: 80vh; /* Garantit que le footer reste en bas */
+            display: flex;
+            justify-content: center;
+            flex: 1; /* S'étire pour remplir l'espace vide et pousse le footer en bas */
+            padding-top: 100px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ff7505;
+        }
+
+/* Style pour harmoniser DataTables avec ton thème */
+#csgoTable {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#csgoTable thead th {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--fg);
+    border-bottom: 2px solid var(--fg) !important;
+}
+#csgoTable thead th {
+  background: linear-gradient(180deg, #a05006, #000);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 15px;
+}
+
