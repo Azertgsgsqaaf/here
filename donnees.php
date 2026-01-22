@@ -65,9 +65,6 @@
             $(document).ready(function() {
                 // Initialisation de DataTables
                 $('#csgoTable').DataTable({
-                    "language": {
-                        "url": "//cdn.datatables.net/plug-ins/1.13.6/i18n/fr-FR.json"
-                    },
                     "pageLength": 10,
                     "order": [[ 0, "asc" ]], // Tri par défaut sur la colonne Rang
                     "columnDefs": [
